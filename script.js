@@ -73,31 +73,29 @@ function move(direction) {
     let airplaneLeft = parseInt(window.getComputedStyle(airplane).getPropertyValue("left"));
     let airplaneTop = parseInt(window.getComputedStyle(airplane).getPropertyValue("top"));
 
-    const moveAmount = 10;
-
     switch (direction) {
         case "ArrowLeft":
             if (airplaneLeft > 0) {
-                airplane.style.left = airplaneLeft - moveAmount + "px";
+                airplane.style.left = airplaneLeft - 10 + "px";
             }
             break;
         case "ArrowRight":
             const gameContainerWidth = gameContainerRect.width;
             const airplaneWidth = airplane.offsetWidth;
             if (airplaneLeft + airplaneWidth < gameContainerWidth) {
-                airplane.style.left = airplaneLeft + moveAmount + "px";
+                airplane.style.left = airplaneLeft + 10 + "px";
             }
             break;
         case "ArrowUp":
             const minUpPosition = gameContainerRect.top;
             if (airplaneRect.top > minUpPosition) {
-                airplane.style.top = airplaneTop - moveAmount + "px";
+                airplane.style.top = airplaneTop - 10 + "px";
             }
             break;
         case "ArrowDown":
             const gameContainerHeight = gameContainerRect.height;
             if (airplaneRect.bottom < gameContainerHeight) {
-                airplane.style.top = airplaneTop + moveAmount + "px";
+                airplane.style.top = airplaneTop + 10 + "px";
             }
             break;
     }
