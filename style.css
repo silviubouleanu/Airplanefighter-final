@@ -1,0 +1,37 @@
+.game-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; 
+    height: 600px; 
+    background-color: rgb(0, 183, 255);
+}
+
+.airplane {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background-color: rgb(255, 55, 0); 
+    top: 50%;
+    left: 50px; 
+    transform: translateY(-50%);
+}
+
+.obstacle {
+    position: absolute;
+    background-image: url("images/obstacle.png");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    top: 50%;   
+    right: 50px; 
+    transform: t ranslateY(-50%);
+}
+
+.projectile {
+    width: 4px;
+    height: 4px;
+    background-color: red;
+    position: absolute;
+}
